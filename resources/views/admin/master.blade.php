@@ -21,6 +21,7 @@
 
 
         <div id="layoutSidenav_content">
+            @yield('store')
 
             @include('admin.partial.footer')
         </div>
