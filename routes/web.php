@@ -18,3 +18,4 @@ use App\Http\Controllers\backend\HomeController as backendHomeController;
 
 /* $ Admin $ */
 Route::get('/', [backendHomeController::class, 'home'])->name('home');
+

@@ -18,6 +18,18 @@
                         <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
                     </nav>
                 </div>
+                <a class="nav-link" href="index.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    PC/Computers
+                </a>
+                <a class="nav-link" href="index.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    Headphones
+                </a>
+                <a class="nav-link" href="index.html">
+                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    Tabs
+                </a>
 
 
             </div>
