@@ -20,6 +20,7 @@ use App\Http\Controllers\backend\DesktopController as backendDesktopController;
 /* $ Admin $ */
 Route::get('/', [backendHomeController::class, 'home'])->name('home');
 
+
 /* Desktop Component */
 //mothetboard
 Route::get('/motherboard', [backendDesktopController::class, 'motherboard'])->name('motherboard');
