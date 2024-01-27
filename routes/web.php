@@ -24,7 +24,10 @@ Route::get('/', [backendHomeController::class, 'home'])->name('home');
 /* Desktop Component */
 //mothetboard
 Route::get('/motherboard', [backendDesktopController::class, 'motherboard'])->name('motherboard');
-//processor
+Route::get('/motherboard-form',[backendDesktopController::class,'motherboardform'])->name('motherboard.form');
+Route::post('/motherboard-store',[backendDesktopController::class,'motherboardstore'])->name('motherboard.store');
+
+// //processor
 Route::get('/processor', [backendDesktopController::class, 'processor'])->name('processor');
 //ram
 Route::get('/ram', [backendDesktopController::class, 'ram'])->name('ram');

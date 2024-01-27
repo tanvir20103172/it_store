@@ -1,4 +1,4 @@
-<footer class="py-4 bg-dark mt-auto">
+{{-- <footer class="py-4 bg-dark mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
                             <div class="text-muted">Copyright &copy; IT Srore Website 2024</div>
@@ -9,4 +9,4 @@
                             </div>
                         </div>
                     </div>
-                </footer>
+                </footer> --}}
