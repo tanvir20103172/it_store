@@ -1,18 +1,21 @@
 @extends('admin.master')
 @section('store')
 <h3 align="center"><u>Optical Device List</u></h3>
-<a href="" class="btn btn-success">Add Optical Device</a>
-<a href="" class="btn btn-primary">Print</a>
+<div>
+    <a href="" class="btn btn-success">Add Optical Device</a>
+    <a href="" class="btn btn-primary">Print</a>
+</div>
 <table class="table table-striped">
     <thead>
         <tr>
             <th scope="col">Si No.</th>
             <th scope="col">Image</th>
-            <th scope="col">Capacity(GB/TB)</th>
-            <th scope="col">RAM Type</th>
-            <th scope="col">Bus Speed(MHz)</th>
-            <th scope="col">Number of Pin</th>
-            <th scope="col">LED Lighting</th>
+            <th scope="col">Model</th>
+            <th scope="col">Type</th>
+            <th scope="col">Read Speed(CD)</th>
+            <th scope="col">Read Speed(DVD)</th>
+            <th scope="col">Write Speed(CD)</th>
+            <th scope="col">Write Speed(DVD)</th>
             <th scope="col">Price</th>
             <th scope="col">Action</th>
         </tr>
@@ -20,6 +23,7 @@
     <tbody>
         <tr>
             <th scope="row">1</th>
+            <td>Mark</td>
             <td>Mark</td>
             <td>Mark</td>
             <td>Otto</td>
