@@ -1,8 +1,10 @@
 @extends('admin.master')
 @section('store')
 <h3 align="center"><u>Processor List</u></h3>
+<div>
 <a href="" class="btn btn-success">Add Processor</a>
 <a href="" class="btn btn-primary">Print</a>
+</div>
 <table class="table table-striped">
     <thead>
         <tr>
