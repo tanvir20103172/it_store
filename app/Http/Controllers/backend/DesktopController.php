@@ -39,6 +39,14 @@ class DesktopController extends Controller
         return view('admin.pages.desktop.casing_fan.list');
     }
 
+    public function ssd(){
+        return view('admin.pages.desktop.ssd.list');
+    }
+
+    public function hdd(){
+        return view('admin.pages.desktop.hdd.list');
+    }
+
     public function cpu_cooler(){
         return view('admin.pages.desktop.cpu_cooler.list');
     }
