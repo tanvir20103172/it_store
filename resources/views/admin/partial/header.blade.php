@@ -9,17 +9,66 @@
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
+                <div class="col-md-10 p-0">
+                    {{ auth()->guard('admin')->user()->name }}
+                </div>
             </form>
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="container modal-content p-5">
+                    <div class="container">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="row">
+                            <div class="text-center rounded-5">
+                                <img style="border-radius: 10%; margin-left: 110px" height="150" width="150"
+                                    src="{{ url('uploads/' .auth()->guard('admin')->user()->image) }}" alt="">
+                                <div class="mt-2">
+                                    <input type="file" style="display: none;" id="profilePicture" name="file" />
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="modal-header border-primary">
+                            <h5 class="modal-title fs-3 fw-bold" id="userModalLabel">
+                                {{ auth()->guard('admin')->user()->name }}</h5>
+                        </div>
+    
+                    </div>
+    
+                    <div class="modal-body">
+    
+                        <div class="row g-3">
+                            <!-- col -->
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-2">Role</div>
+                                    <div class="col-1">:</div>
+                                    <div class="col-8">{{ auth()->guard('admin')->user()->role }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-2">Email</div>
+                                    <div class="col-1">:</div>
+                                    <div class="col-8">{{ auth()->guard('admin')->user()->email }}</div>
+                                </div>
+                            </div>
+    
+                            <div class="col-12 pb-2">
+                                <div class="row">
+                                    <div class="col-2">Number</div>
+                                    <div class="col-1">:</div>
+                                    <div class="col-8">{{ auth()->guard('admin')->user()->phone }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-warning mb-3">
+                        <a class="nav-link" href="{{ route('admin.logout') }}">
+                            Log out
+                        </a>
+                    </button>
+                    <a href="{{ route('profile.view') }}"><i class="bi bi-people-fill"></i></a>
+                </div>
+            </div>
+        </div>

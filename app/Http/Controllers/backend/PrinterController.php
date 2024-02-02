@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class PrinterController extends Controller
 {
     public function printer(){
-        $printer= Printer::all();
+        $printers= Printer::all();
         return view('admin.pages.printer.list', compact('printers'));
     }
     public function printerform()

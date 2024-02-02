@@ -12,7 +12,7 @@ class WatchController extends Controller
 {
     public function smart_watch(){
         $smart_watchs= SmartWatch::all();
-        return view('admin.pages.smart_watch.list', compact('smart_watch'));
+        return view('admin.pages.smart_watch.list', compact('smart_watchs'));
     }
     public function smart_watchform()
     {

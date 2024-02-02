@@ -1,13 +1,15 @@
 @extends('admin.master')
+
 @section('store')
-    <h3 align="center"><u>Digital Pen List</u></h3>
-    <div>
-        <a href="{{ route('digital_pen.form') }}" class="btn btn-success">Add Digital Pen</a>
-        <a href="#" class="btn btn-primary">Print</a>
-    </div>
-    <table class="table table-striped">
-        <thead>
-            <tr>
+    <div class="container">
+        <h3 align="center"><u>Digital Pen List</u></h3>
+        <div class="mb-3">
+            <a href="{{ route('digital_pen.form') }}" class="btn btn-success">Add Digital Pen</a>
+            <a href="#" class="btn btn-primary">Print</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
                 <th scope="col">Si No.</th>
                 <th scope="col">Image</th>
                 <th scope="col">Brand</th>

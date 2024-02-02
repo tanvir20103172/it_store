@@ -1,21 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
+use App\Http\Controllers\backend\UserController;
+use App\Http\Controllers\backend\PenController as backendPenController;
+use App\Http\Controllers\backend\GameController as backendGameController;
 use App\Http\Controllers\backend\HomeController as backendHomeController;
+use App\Http\Controllers\backend\SoundController as backendSoundController;
+use App\Http\Controllers\backend\WatchController as backendWatchController;
+use App\Http\Controllers\frontend\HomeController as FrontendHomeController;
+use App\Http\Controllers\backend\CameraController as backendCameraController;
+use App\Http\Controllers\backend\LaptopController as backendLaptopController;
+use App\Http\Controllers\backend\RouterController as backendRouterController;
 use App\Http\Controllers\backend\DesktopController as backendDesktopController;
 use App\Http\Controllers\backend\MonitorController as backendMonitorController;
-use App\Http\Controllers\backend\LaptopController as backendLaptopController;
-use App\Http\Controllers\backend\CameraController as backendCameraController;
 use App\Http\Controllers\backend\PrinterController as backendPrinterController;
-use App\Http\Controllers\backend\SoundController as backendSoundController;
-use App\Http\Controllers\backend\HeadphoneController as backendHeadphoneController;
-use App\Http\Controllers\backend\RouterController as backendRouterController;
-use App\Http\Controllers\backend\WatchController as backendWatchController;
-use App\Http\Controllers\backend\GameController as backendGameController;
-use App\Http\Controllers\backend\CalculatorController as backendCalculatorController;
-use App\Http\Controllers\backend\PenController as backendPenController;
 use App\Http\Controllers\backend\CccameraController as backendCccameraController;
+use App\Http\Controllers\backend\HeadphoneController as backendHeadphoneController;
+use App\Http\Controllers\backend\CalculatorController as backendCalculatorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +32,22 @@ use App\Http\Controllers\backend\CccameraController as backendCccameraController
 
 /* $ Admin $ */
 
+Route::group(['prefix' => 'admin'], function () {
+
+    Route::get('/login', [UserController::class, 'loginForm'])->name('admin.login');
+    Route::post('/login-form-post', [UserController::class, 'loginPost'])->name('admin.login.post');
+
+    Route::group(['middleware' => 'admin'], function () {
+
 Route::get('/', [backendHomeController::class, 'home'])->name('home');
+
+
+Route::get('/admin/logout', [UserController::class, 'logout'])->name('admin.logout');
+
+
+        Route::get('/user/list', [UserController::class, 'list'])->name('user.list');
+        Route::get('/user/form', [UserController::class, 'createform'])->name('user.form');
+        Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
 
 
 /* Desktop Component */
@@ -143,3 +159,7 @@ Route::post('/digital_pen-store', [backendPenController::class, 'digital_penstor
 Route::get('/cc_camera', [backendCccameraController::class, 'cc_camera'])->name('cc_camera');
 Route::get('/cc_camera-form', [backendCccameraController::class, 'cc_camera-form'])->name('cc_camera.form');
 Route::post('/cc_camera-store', [backendCccameraController::class, 'cc_camera-store'])->name('cc_camera.store');
+
+
+});
+});

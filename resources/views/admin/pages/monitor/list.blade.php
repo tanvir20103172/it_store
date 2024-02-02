@@ -1,12 +1,15 @@
 @extends('admin.master')
+
 @section('store')
-    <h3 align="center"><u>Monitor List</u></h3>
-    <div class="mb-3">
-        <a href="{{ route('monitor.form') }}" class="btn btn-success btn-sm">Add Monitor</a>
-        <a href="#" class="btn btn-primary btn-sm">Print</a>
-    </div>
-    <table class="table table-striped">
-        <thead>
+    <div class="container">
+        <h3 align="center"><u>Monitor List</u></h3>
+        <div class="mb-3">
+            <a href="{{ route('monitor.form') }}" class="btn btn-success btn-sm">Add Monitor</a>
+            <a href="#" class="btn btn-primary btn-sm">Print</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
             <tr>
                 <th scope="col">Si No.</th>
                 <th scope="col">Image</th>

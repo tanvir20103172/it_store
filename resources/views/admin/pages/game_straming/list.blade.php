@@ -1,13 +1,15 @@
 @extends('admin.master')
+
 @section('store')
-    <h3 align="center"><u>Game Streaming List</u></h3>
-    <div>
-        <a href="{{ route('game_straming.form') }}" class="btn btn-success">Add Game Streaming</a>
-        <a href="#" class="btn btn-primary">Print</a>
-    </div>
-    <table class="table table-striped">
-        <thead>
-            <tr>
+    <div class="container">
+        <h3 align="center"><u>Game Streaming List</u></h3>
+        <div class="mb-3">
+            <a href="{{ route('game_straming.form') }}" class="btn btn-success">Add Game Streaming</a>
+            <a href="#" class="btn btn-primary">Print</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
                 <th scope="col">Si No.</th>
                 <th scope="col">Image</th>
                 <th scope="col">Brand</th>

@@ -1,13 +1,15 @@
 @extends('admin.master')
+
 @section('store')
-    <h3 align="center"><u>Calculator List</u></h3>
-    <div class="mb-3">
-        <a href="{{ route('calculator.form') }}" class="btn btn-success btn-sm">Add Calculator</a>
-        <a href="#" class="btn btn-primary btn-sm">Print</a>
-    </div>
-    <table class="table table-striped">
-        <thead>
-            <tr>
+    <div class="container">
+        <h3 align="center"><u>Calculator List</u></h3>
+        <div class="mb-3">
+            <a href="{{ route('calculator.form') }}" class="btn btn-success">Add Calculator</a>
+            <a href="#" class="btn btn-primary">Print</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
                 <th scope="col">Si No.</th>
                 <th scope="col">Image</th>
                 <th scope="col">Brand</th>
